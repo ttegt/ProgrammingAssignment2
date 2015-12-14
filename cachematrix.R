@@ -1,5 +1,5 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The following two functions create a way to avoid recalculating
+## matrix inverses in R.
 
 ## This function takes a matrix and creates a list containing a function
 ## that will
