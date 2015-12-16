@@ -1,9 +1,10 @@
 ## The following two functions create a way to avoid recalculating the inverse
-## of a matrix once it has already been calculated.
+## of a matrix once it has already been calculated. Code modeled on
+## makevector/cachemean example.
 
 
-## This function takes a matrix and creates a "special" matrix that can cache
-## its own inverse.
+## This function takes a matrix and creates a "special" matrix (really a list of functions) 
+## that can cache its own inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
