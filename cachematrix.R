@@ -1,12 +1,9 @@
-## The following two functions create a way to avoid recalculating
-## matrix inverses in R.
+## The following two functions create a way to avoid recalculating the inverse
+## of a matrix once it has already been calculated.
 
-## This function takes a matrix and creates a list containing a function
-## that will
-## 1. Set the value of the matrix
-## 2. Get the value of the matrix
-## 3. Set the value of the inverse of the matrix
-## 4. Get the value of the inverse of the matrix
+
+## This function takes a matrix and creates a "special" matrix that can cache
+## its own inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
@@ -24,7 +21,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## This function will calculate the inverse of the special matrix
-## created by the previous function, or retrieve the cached inverse
+## created by makeCacheMatrix, or retrieve the cached inverse
 ## if it already has been calculated.
 
 
